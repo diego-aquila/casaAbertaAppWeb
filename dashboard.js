@@ -32,7 +32,7 @@ const chart = new Chart(ctx, {
         align: 'end',
         font: {
           weight: 'bold',
-          size: 14
+          size: 23
         }
       }
     },

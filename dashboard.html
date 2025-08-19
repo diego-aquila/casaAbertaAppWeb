@@ -8,16 +8,39 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
   <script src="firebase-config.js"></script>
-  <script src="dashboard.js" defer></script>
-  <!-- No seu HTML -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
-<script src="seu_arquivo.js"></script>
-
 </head>
 <body>
   <h1>Visitas em Tempo Real</h1>
-  <canvas id="graficoVisitas"></canvas>
+  <div class="chart-container">
+    <canvas id="graficoVisitas"></canvas>
+  </div>
+
+  <div class="stands-container">
+    <div class="stand">
+      <img src="img/deuAlerta.png" alt="Stand Deu Alerta">
+    </div>
+    <div class="stand">
+      <img src="img/deuCena.png" alt="Stand Deu Cena">
+    </div>
+    <div class="stand">
+      <img src="img/deuCurto.png" alt="Stand Deu Curto">
+    </div>
+    <div class="stand">
+      <img src="img/deuGame.png" alt="Stand Deu Game">
+    </div>
+    <div class="stand">
+      <img src="img/deuLink.png" alt="Stand Deu Link">
+    </div>
+    <div class="stand">
+      <img src="img/deuPixel.png" alt="Stand Deu Pixel">
+    </div>
+    <div class="stand">
+      <img src="img/deuPlanta.png" alt="Stand Deu Planta">
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
 </body>
 </html>

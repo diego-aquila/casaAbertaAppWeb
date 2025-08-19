@@ -5,7 +5,7 @@ function showSnackbar(message, type = 'success') {
   
   setTimeout(() => {
     snackbar.className = snackbar.className.replace(`show ${type}`, '');
-  }, 3000);
+  }, 1000);
 }
 
 function registrarVisita(estande) {
