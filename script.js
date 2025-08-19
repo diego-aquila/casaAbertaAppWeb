@@ -1,3 +1,13 @@
+function showSnackbar(message, type = 'success') {
+  const snackbar = document.getElementById("snackbar");
+  snackbar.textContent = message;
+  snackbar.className = `show ${type}`;
+  
+  setTimeout(() => {
+    snackbar.className = snackbar.className.replace(`show ${type}`, '');
+  }, 3000);
+}
+
 function registrarVisita(estande) {
   const ref = db.collection("visitas").doc(estande);
 
@@ -10,9 +20,9 @@ function registrarVisita(estande) {
       return ref.set({ quantidade: 1 });
     }
   }).then(() => {
-    alert(`✅ Visita registrada com sucesso no estande "${estande.toUpperCase()}"`);
+    showSnackbar(`✅ Visita registrada com sucesso no estande "${estande.toUpperCase()}"`, 'success');
   }).catch(error => {
     console.error("Erro ao registrar visita:", error);
-    alert("❌ Ocorreu um erro ao registrar sua visita. Tente novamente.");
+    showSnackbar("❌ Ocorreu um erro ao registrar sua visita. Tente novamente.", 'error');
   });
 }
