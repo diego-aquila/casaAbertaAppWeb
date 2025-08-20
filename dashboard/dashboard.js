@@ -1,4 +1,5 @@
-const labels = ["deuAlerta", "deuCena", "deuCurto", "deuGame", "deuLink", "deuPixel", "deuPlanta"];
+const labels = ["", "", "", "", "", "", ""];
+const labelsSearch = ["deuAlerta", "deuCena", "deuCurto", "deuGame", "deuLink", "deuPixel", "deuPlanta"];
 
 // Cores predominantes de cada stand
 const standColors = [
@@ -18,8 +19,8 @@ const chart = new Chart(ctx, {
   data: {
     labels,
     datasets: [{
-      label: "Visitas",
-      data: new Array(labels.length).fill(0),
+      label: "",
+      data: ""  ,
       backgroundColor: standColors // Usando as cores específicas de cada stand
     }]
   },
@@ -45,11 +46,11 @@ const chart = new Chart(ctx, {
 
 // Atualiza o gráfico com dados do Firestore
 db.collection("visitas").onSnapshot(snapshot => {
-  const newData = new Array(labels.length).fill(0);
+  const newData = new Array(labelsSearch.length).fill(0);
 
   snapshot.docs.forEach(doc => {
     const label = doc.id;
-    const index = labels.indexOf(label);
+    const index = labelsSearch.indexOf(label);
     if (index !== -1) {
       newData[index] = doc.data().quantidade || 0;
     }

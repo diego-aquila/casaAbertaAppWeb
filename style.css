@@ -1,8 +1,9 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 0;
-  background-color: #fef6ea;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0;
+    background-color: #fef6ea;
+    margin: 0 auto;
 }
 
 h1 {
@@ -73,32 +74,28 @@ h1 {
   background-color: #f44336;
 }
 
-/* --- ESTILOS PARA O DASHBOARD --- */
 
-/* Centraliza o container do gráfico */
 .chart-container {
-  width: 100%;
-  height: 80%;
-  max-width: 1000px;
-  margin: 20px auto;
+  
+  width: 80%;
+  margin:0 auto ;
+  
 }
 
-/* Container para as imagens dos stands abaixo do gráfico */
 .stands-container {
-  display: flex; /* Essencial para alinhar as imagens lado a lado */
-  justify-content: space-around;
-  width: 90%;
-  max-width: 1000px;
-  margin: 10px auto 0;
-  padding-top: 15px;
-  border-top: 2px solid #e0e0e0;
+    display: flex
+;
+    align-items: stretch;
+    width: 79%;
+    margin: 0 auto;
+    padding-left: 22px;
+    padding-bottom: 20px;
+    margin-top: -20px;
 }
 
 /* Div individual de cada imagem de stand */
 .stand {
-  flex: 1; /* Faz com que cada imagem ocupe o mesmo espaço */
-  text-align: center;
-  padding: 0 5px; /* Pequeno espaçamento entre as imagens */
+ 
 }
 
 /* Estilo para as imagens dentro do .stand (aproveitando seu estilo) */
